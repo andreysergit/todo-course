@@ -44,13 +44,24 @@ function addTodo(event) {
   todoInput.value = "";
 }
 
+let inputSave;
+document.addEventListener("DOMContentLoaded", () => {
+  inputSave = document.querySelector(".todo-item");
+  inputSave.value= JSON.parse(localStorage.getItem("inputSave"));
+  console.log(inputSave);
+  let clickEdit = document.querySelector(".edit-btn");
+  clickEdit.addEventListener("click", () => {
+    console.log("hello");
+    JSON.stringify(localStorage.setItem("inputSave", inputSave));
+  });
+});
+
 function deleteCheck(event) {
   const item = event.target;
   if (item.classList[0] === "trash-btn") {
     const todo = item.parentElement;
     if (confirm("Are you sure?")) {
       todo.classList.add("fall");
-      todo.remove();
     }
   }
   if (item.classList[0] === "complete-btn") {
