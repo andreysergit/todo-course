@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TODOlist</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"
+        integrity="sha256-KzZiKy0DWYsnwMF+X1DvQngQ2/FxF7MF3Ff72XcpuPs=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>ToDo list</h1>
+    </header>
+    <form>
+        <input type="text" name="" class="todo-input">
+        <button class="todo-button" type="submit">
+            <i class="far fa-plus-square"></i>
+        </button>
+        <div class="select">
+            <select name="todos" class="filter-todo">
+                <option value="uncompleted">Uncompleted</option>
+                <option value="completed">Completed</option>
+                <option value="remote">Remote</option>
+            </select>
+        </div>
+        <button class="btn-remove">
+            <i class="fa fa-minus-circle" aria-hidden="true"></i>
+        </button>
+    </form>
+    <div class="todo-container">
+        <ul class="todo-list">
+        </ul>
+    </div>
+    <script src="todo.js"></script>
+</body>
+</html>
